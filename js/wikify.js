@@ -71,7 +71,7 @@ var config = merge(
     loadNavbar: null,
     homepage: 'index.md',
     coverpage: '',
-    basePath: '',
+    basePath: '/docs/',
     auto2top: true,
     name: '',
     themeColor: '#000000',
