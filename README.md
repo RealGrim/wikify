@@ -1,5 +1,5 @@
 # Wikify
-Wikify is a 100% static Wiki "generator", built for Netlify, with modified versions of Docsify, Netlify CMS, and the Netlify Identity Widget. It is a single-page wiki, and the docs are made from Markdown files.
+Wikify is a 100% static Wiki "generator", built for Netlify, with modified versions of [Docsify](https://docsify.js.org), Netlify CMS, and the Netlify Identity Widget. It is a single-page wiki, and the docs are made from Markdown files.
 
 ## Getting Started
 1. First off, [deploy this repository to Netlify](https://app.netlify.com/start/deploy?repository=https://github.com/TristianK3604/wikify).
