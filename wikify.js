@@ -69,14 +69,14 @@ var config = merge(
     subMaxLevel: 0,
     loadSidebar: null,
     loadNavbar: null,
-    homepage: 'README.md',
+    homepage: 'index.md',
     coverpage: '',
     basePath: '',
-    auto2top: false,
+    auto2top: true,
     name: '',
-    themeColor: '',
+    themeColor: '#000000',
     nameLink: window.location.pathname,
-    autoHeader: false,
+    autoHeader: true,
     executeScript: null,
     noEmoji: false,
     ga: '',
@@ -86,14 +86,14 @@ var config = merge(
     routerMode: 'hash',
     noCompileLinks: []
   },
-  window.$docsify
+  window.$wikify
 );
 
 var script =
   document.currentScript ||
   [].slice
     .call(document.getElementsByTagName('script'))
-    .filter(function (n) { return /docsify\./.test(n.src); })[0];
+    .filter(function (n) { return /wikify\./.test(n.src); })[0];
 
 if (script) {
   for (var prop in config) {
@@ -111,7 +111,7 @@ if (script) {
   if (config.name === true) { config.name = ''; }
 }
 
-window.$docsify = config;
+window.$wikify = config;
 
 function initLifecycle (vm) {
   var hooks = [
@@ -2879,14 +2879,14 @@ Compiler.prototype._initRenderer = function _initRenderer () {
   origin.heading = renderer.heading = function (text, level) {
     var nextToc = { level: level, title: text };
 
-    if (/{docsify-ignore}/g.test(text)) {
-      text = text.replace('{docsify-ignore}', '');
+    if (/{wikify-ignore}/g.test(text)) {
+      text = text.replace('{wikify-ignore}', '');
       nextToc.title = text;
       nextToc.ignoreSubHeading = true;
     }
 
-    if (/{docsify-ignore-all}/g.test(text)) {
-      text = text.replace('{docsify-ignore-all}', '');
+    if (/{wikify-ignore-all}/g.test(text)) {
+      text = text.replace('{wikify-ignore-all}', '');
       nextToc.title = text;
       nextToc.ignoreAllSubs = true;
     }
@@ -3363,7 +3363,7 @@ function formatUpdated (html, updated, fn) {
       ? tinydate(fn)(new Date(updated))
       : updated;
 
-  return html.replace(/{docsify-updated}/g, updated)
+  return html.replace(/{wikify-updated}/g, updated)
 }
 
 function renderMain (html) {
@@ -4024,8 +4024,8 @@ var util = Object.freeze({
 });
 
 var initGlobalAPI = function () {
-  window.Docsify = { util: util, dom: dom, get: get, slugify: slugify };
-  window.DocsifyCompiler = Compiler;
+  window.Wikify = { util: util, dom: dom, get: get, slugify: slugify };
+  window.WikifyCompiler = Compiler;
   window.marked = marked;
   window.Prism = prism;
 };
@@ -4043,11 +4043,11 @@ function ready (callback) {
   document.addEventListener('DOMContentLoaded', callback);
 }
 
-function Docsify () {
+function Wikify () {
   this._init();
 }
 
-var proto = Docsify.prototype;
+var proto = Wikify.prototype;
 
 initMixin(proto);
 routerMixin(proto);
@@ -4063,11 +4063,11 @@ initGlobalAPI();
 /**
  * Version
  */
-Docsify.version = '4.5.7';
+Wikify.version = '1.0.0';
 
 /**
- * Run Docsify
+ * Run Wikify
  */
-ready(function (_) { return new Docsify(); });
+ready(function (_) { return new Wikify(); });
 
 }());
