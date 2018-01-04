@@ -3639,7 +3639,7 @@ var replaceSlug = cached(function (path) {
 var HashHistory = (function (History$$1) {
   function HashHistory (config) {
     History$$1.call(this, config);
-    this.mode = 'hash';
+    /*this.mode = 'hash';*/
   }
 
   if ( History$$1 ) HashHistory.__proto__ = History$$1;
