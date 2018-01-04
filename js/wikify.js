@@ -3628,19 +3628,19 @@ History.prototype.parse = function parse () {};
 
 History.prototype.toURL = function toURL () {};
 
-function replaceHash (path) {
+/*function replaceHash (path) {
   var i = location.href.indexOf('#');
   location.replace(location.href.slice(0, i >= 0 ? i : 0) + '#' + path);
 }
 
 var replaceSlug = cached(function (path) {
   return path.replace('#', '?id=')
-});
+});*/
 
 var HashHistory = (function (History$$1) {
   function HashHistory (config) {
     History$$1.call(this, config);
-    this.mode = 'hash';
+    /*this.mode = 'hash';*/
   }
 
   if ( History$$1 ) HashHistory.__proto__ = History$$1;
