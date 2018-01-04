@@ -4062,7 +4062,7 @@ initGlobalAPI();
 /**
  * Version
  */
-Wikify.version = '1.0.0';
+Wikify.version = '0.0.1-dev.1';
 
 /**
  * Run Wikify
