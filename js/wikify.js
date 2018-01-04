@@ -4,7 +4,11 @@
 /**
 * Remove the hash to simulate a multiple-page wiki
 */
-//history.replaceState({}, document.title, ".");
+if(window.history.pushState) {
+    window.history.pushState('', '/', window.location.pathname)
+} else {
+    window.location.hash = '';
+}
 	
 /**
  * Create a cached version of a pure function.
