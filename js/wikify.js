@@ -3368,8 +3368,7 @@ function formatUpdated (html, updated, fn) {
 
 function renderMain (html) {
   if (!html) {
-    // TODO: Custom 404 page
-    html = 'not found';
+    html = '<h1>404 Page not Found</h1>The page you are looking for could not be found.';
   }
 
   this._renderTo('.markdown-section', html);
