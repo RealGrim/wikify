@@ -6,7 +6,9 @@
   <meta charset="UTF-8">
   <link rel="stylesheet" href="/css/wikify.css">
   <script>
-  return window.history.pushState(e,null,t)
+    function removeHash () { 
+    history.pushState("", document.title, window.location.pathname + window.location.search);
+    }
   </script>
   <script src="/js/netlify-identity-widget.js"></script>
   <script>
