@@ -17,3 +17,9 @@ publish_mode: editorial_workflow
 For a private wiki (only invited users can create posts), set the registration mode to **invite only** in your Identity settings.
 
 More documentation coming soon
+
+## Todo
+
+- [ ] Add Netlify GoTell Comments
+- [ ] Wikify Manager Redesign
+- [ ] Use JS API to replace `#` with a better looking url (`mysite.com/thisdoc` rather than `mysite.com/#/thisdoc`) (Currently working on)
