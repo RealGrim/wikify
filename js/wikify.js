@@ -4,7 +4,7 @@
 /**
 * Remove the hash to simulate a multiple-page wiki
 */
-history.replaceState({}, document.title, ".");
+//history.replaceState({}, document.title, ".");
 	
 /**
  * Create a cached version of a pure function.
