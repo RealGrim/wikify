@@ -3627,14 +3627,14 @@ History.prototype.parse = function parse () {};
 
 History.prototype.toURL = function toURL () {};
 
-function replaceHash (path) {
+/*function replaceHash (path) {
   var i = location.href.indexOf('#');
   location.replace(location.href.slice(0, i >= 0 ? i : 0) + '#' + path);
 }
 
 var replaceSlug = cached(function (path) {
   return path.replace('#', '?id=')
-});
+});*/
 
 var HashHistory = (function (History$$1) {
   function HashHistory (config) {
