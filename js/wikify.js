@@ -2,6 +2,11 @@
 'use strict';
 
 /**
+* Remove the hash to simulate a multiple-page wiki
+*/
+history.replaceState({}, document.title, ".");
+	
+/**
  * Create a cached version of a pure function.
  */
 function cached (fn) {
@@ -63,7 +68,7 @@ function isFn (obj) {
 
 var config = merge(
   {
-    el: '#app',
+    /*el: '#app',*/
     repo: '',
     maxLevel: 6,
     subMaxLevel: 0,
@@ -169,17 +174,17 @@ var cacheNode = {};
  * @param  {Boolean} noCache
  * @return {Element}
  */
-function getNode (el, noCache) {
+function getNode (/*el,*/ noCache) {
   if ( noCache === void 0 ) noCache = false;
 
-  if (typeof el === 'string') {
+  /*if (typeof el === 'string') {
     if (typeof window.Vue !== 'undefined') {
       return find(el)
     }
     el = noCache ? find(el) : (cacheNode[el] || (cacheNode[el] = find(el)));
   }
 
-  return el
+  return el*/
 }
 
 var $ = document;
