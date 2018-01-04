@@ -1,14 +1,5 @@
 (function () {
 'use strict';
-
-/**
-* Remove the hash to simulate a multiple-page wiki
-*/
-if(window.history.pushState) {
-    window.history.pushState('', '/', window.location.pathname)
-} else {
-    window.location.hash = '';
-}
 	
 /**
  * Create a cached version of a pure function.
