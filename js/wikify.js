@@ -1329,7 +1329,8 @@ InlineLexer.prototype.mangle = function(text) {
     if (Math.random() > 0.5) {
       ch = 'x' + ch.toString(16);
     }
-    out += '&#' + ch + ';';
+    //out += '&#' + ch + ';';
+    out += '&' + ch + ';';
   }
 
   return out;
