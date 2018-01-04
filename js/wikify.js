@@ -3629,7 +3629,7 @@ History.prototype.toURL = function toURL () {};
 
 function replaceHash (path) {
   //var i = location.href.indexOf('#');
-  location.replace(location.href.slice(0, /*i*/ >= 0 ? i : 0) /*+ '#'*/ + path);
+  location.replace(location.href.slice(0, /*i*/ >= 0 ? /* i */ : 0) /*+ '#'*/ + path);
 }
 
 var replaceSlug = cached(function (path) {
