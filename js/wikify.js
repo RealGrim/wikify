@@ -4,7 +4,7 @@
 /**
 * Remove the hash to simulate a multiple-page wiki
 */
-//history.replaceState({}, document.title, ".");
+history.replaceState({}, document.title, ".");
 	
 /**
  * Create a cached version of a pure function.
@@ -3628,8 +3628,8 @@ History.prototype.parse = function parse () {};
 History.prototype.toURL = function toURL () {};
 
 function replaceHash (path) {
-  var i = location.href.indexOf('#');
-  location.replace(location.href.slice(0, i >= 0 ? i : 0) /*+ '#'*/ + path);
+  //var i = location.href.indexOf('#');
+  location.replace(location.href.slice(0, /*i*/ >= 0 ? i : 0) /*+ '#'*/ + path);
 }
 
 var replaceSlug = cached(function (path) {
