@@ -174,17 +174,17 @@ var cacheNode = {};
  * @param  {Boolean} noCache
  * @return {Element}
  */
-function getNode (/*el,*/ noCache) {
+function getNode (el, noCache) {
   if ( noCache === void 0 ) noCache = false;
 
-  /*if (typeof el === 'string') {
+  if (typeof el === 'string') {
     if (typeof window.Vue !== 'undefined') {
       return find(el)
     }
     el = noCache ? find(el) : (cacheNode[el] || (cacheNode[el] = find(el)));
   }
 
-  return el*/
+  return el
 }
 
 var $ = document;
@@ -1329,8 +1329,7 @@ InlineLexer.prototype.mangle = function(text) {
     if (Math.random() > 0.5) {
       ch = 'x' + ch.toString(16);
     }
-    //out += '&#' + ch + ';';
-    out += '&' + ch + ';';
+    out += '&#' + ch + ';';
   }
 
   return out;
